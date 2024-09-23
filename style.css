@@ -1,23 +1,138 @@
+/* General Styling */
 body {
-    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;  /* Black background */
+    color: #f5f5f5;  /* Light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.card {
+/* Container */
+.container {
     max-width: 600px;
-    margin: auto;
+    width: 100%;
+    background-color: #1a1a1a;  /* Dark grey card background */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);  /* Stronger shadow */
+    border-radius: 12px;
+    padding: 20px;
+    color: #f5f5f5;  /* Light text on dark background */
 }
 
-#search-history {
+/* Card Styling */
+.card {
+    background-color: #141414;  /* Darker black card background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);  /* Stronger shadow for depth */
+}
+
+/* Branding/Project Name */
+.card h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #9b59b6;  /* Vibrant purple color for the project name */
+    text-align: center;
+}
+
+/* Search Input Styling */
+.input-group input {
+    border: 2px solid #9b59b6;  /* Purple border */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #2e2e2e;  /* Dark grey background for input */
+    color: #f5f5f5;  /* Light text inside the input */
+}
+
+.input-group input::placeholder {
+    color: #888;  /* Lighter grey placeholder */
+}
+
+/* Search Button with Icon */
+.input-group button {
+    background-color: #9b59b6;  /* Purple background */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group button i {
+    font-size: 20px;
+}
+
+.input-group button:hover {
+    background-color: #8e44ad;  /* Darker purple on hover */
+}
+
+/* Search History Styling */
+h5 {
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.list-group {
     max-height: 200px;
     overflow-y: auto;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
+    margin-top: 10px;
 }
 
-#search-history li {
-    padding: 0.75rem;
+.list-group-item {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 1px solid #9b59b6;  /* Purple border */
+    border-radius: 5px;
+    background-color: #1a1a1a;  /* Match card background */
+    color: #f5f5f5;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-#search-history li:nth-child(even) {
-    background-color: #f1f3f5;
+.list-group-item:hover {
+    background-color: #9b59b6;
+    color: white;
+    cursor: pointer;
+}
+
+/* Clear Button */
+#clear-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #9b59b6;  /* Purple button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* #clear-btn:hover {
+    background-color: #8e44ad;  /* Darker purple on hover */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .input-group input, .input-group button {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .list-group-item {
+        font-size: 14px;
+    }
 }
