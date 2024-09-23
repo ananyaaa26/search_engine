@@ -1,0 +1,23 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    max-width: 600px;
+    margin: auto;
+}
+
+#search-history {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+
+#search-history li {
+    padding: 0.75rem;
+}
+
+#search-history li:nth-child(even) {
+    background-color: #f1f3f5;
+}
